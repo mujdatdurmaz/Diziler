@@ -126,31 +126,38 @@ namespace Diziler
             //        break;
             //}
 
-            int[] sayilar = {1,3,5,7,9,11 };
-            int indis = 0;
-        
-
-                Console.WriteLine("Dizi içerisinde ne arıyorsunuz?");
-                int aranan = int.Parse(Console.ReadLine());
-                Console.WriteLine(Array.IndexOf(sayilar, aranan));
-                indis = Array.IndexOf(sayilar, aranan);
-          
-
-            Array.Clear(sayilar, 0, 5);
-
-            foreach (var item in sayilar)
-            {
-                Console.Write(item + " ");
-            }
+            //int[] sayilar = {1,3,5,7,9,11 };
+            //int indis = 0;
 
 
-            int[] b = new int[10];
-            b[0] = 15;
+            //    Console.WriteLine("Dizi içerisinde ne arıyorsunuz?");
+            //    int aranan = int.Parse(Console.ReadLine());
+            //    Console.WriteLine(Array.IndexOf(sayilar, aranan));
+            //    indis = Array.IndexOf(sayilar, aranan);
 
-            foreach (var icerik in b)
-            {
-                Console.Write(icerik + "\r");
-            }
+
+            //Array.Clear(sayilar, 0, 5);
+
+            //foreach (var item in sayilar)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+
+            //int[] b = new int[10];
+            //b[0] = 15;
+
+            //foreach (var icerik in b)
+            //{
+            //    Console.Write(icerik + "\r");
+            //}
+
+            int[] sayilar = {10,22,34,47,55,63 };
+            Console.WriteLine(sayilar.Count());
+            Console.WriteLine(sayilar.Max());
+            Console.WriteLine(sayilar.Min());
+            Console.Write(sayilar.Average());
+            
             Console.ReadKey();
 
         }
