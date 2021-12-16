@@ -151,6 +151,8 @@ namespace Diziler
             {
                 Console.Write(icerik + "\r");
             }
+
+
             Console.ReadKey();
 
         }
