@@ -128,15 +128,29 @@ namespace Diziler
 
             int[] sayilar = {1,3,5,7,9,11 };
             int indis = 0;
-            do
-            {
+        
 
                 Console.WriteLine("Dizi içerisinde ne arıyorsunuz?");
                 int aranan = int.Parse(Console.ReadLine());
                 Console.WriteLine(Array.IndexOf(sayilar, aranan));
                 indis = Array.IndexOf(sayilar, aranan);
-            } while (indis < 6);
-           
+          
+
+            Array.Clear(sayilar, 0, 5);
+
+            foreach (var item in sayilar)
+            {
+                Console.Write(item + " ");
+            }
+
+
+            int[] b = new int[10];
+            b[0] = 15;
+
+            foreach (var icerik in b)
+            {
+                Console.Write(icerik + "\r");
+            }
             Console.ReadKey();
 
         }
