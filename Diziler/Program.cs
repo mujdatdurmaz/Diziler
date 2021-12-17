@@ -126,14 +126,14 @@ namespace Diziler
             //        break;
             //}
 
-            //int[] sayilar = {1,3,5,7,9,11 };
+            //int[] sayilar = { 1, 9, 5, 7, 3, 11 };
             //int indis = 0;
 
 
-            //    Console.WriteLine("Dizi içerisinde ne arıyorsunuz?");
-            //    int aranan = int.Parse(Console.ReadLine());
-            //    Console.WriteLine(Array.IndexOf(sayilar, aranan));
-            //    indis = Array.IndexOf(sayilar, aranan);
+            //Console.WriteLine("Dizi içerisinde ne arıyorsunuz?");
+            //int aranan = int.Parse(Console.ReadLine());
+            //Console.WriteLine(Array.IndexOf(sayilar, aranan));
+            //indis = Array.IndexOf(sayilar, aranan);
 
 
             //Array.Clear(sayilar, 0, 5);
@@ -152,12 +152,83 @@ namespace Diziler
             //    Console.Write(icerik + "\r");
             //}
 
-            int[] sayilar = {10,22,34,47,55,63 };
-            Console.WriteLine(sayilar.Count());
-            Console.WriteLine(sayilar.Max());
-            Console.WriteLine(sayilar.Min());
-            Console.Write(sayilar.Average());
-            
+            //int[] sayilar = {10,22,34,47,55,63 };
+            //Console.WriteLine(sayilar.Count());
+            //Console.WriteLine(sayilar.Max());
+            //Console.WriteLine(sayilar.Min());
+            //Console.Write(sayilar.Average());
+
+
+            //string[] sehirler = new string[5];
+
+            //Console.WriteLine("Şehirlerin isimlerini giriniz.");
+            //for (int i = 0; i < sehirler.Length; i++)
+            //{
+            //    Console.Write((i + 1) + ". Şehir adını giriniz.");
+            //    string ekle = Console.ReadLine();
+            //    sehirler[i] = ekle;
+
+            //}
+
+            //Console.WriteLine("Şehir Ara : ");
+            //string ara = Console.ReadLine();
+
+            //if (Array.IndexOf(sehirler, ara) == -1)
+            //{
+            //    Console.WriteLine("Aradığınız şehir YOKTUR.");
+            //}
+            //else
+            //{ Console.WriteLine("Aradığınız Şehir :{0} Dizideki sırası : {1} ",ara, Array.IndexOf(sehirler, ara)+1); }
+
+            //int[] numbers = {1,2,3,4,5,6,7,8,9 };
+
+            //Array.Clear(numbers, 3, 2);
+
+            //foreach (var number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+            Console.Write("Kaç ürün kaydı yapacaksınız ? ");
+            int kayitSayisi = int.Parse(Console.ReadLine());
+
+            string[] urunNo = new string[kayitSayisi];
+            string[] urunAdi = new string[kayitSayisi];
+            double[] urunFiyat = new double[kayitSayisi];
+
+            for (int i = 0; i < kayitSayisi; i++)
+            {
+                Console.Write((i + 1) + ". ürün No Giriniz : ");
+                urunNo[i] = Console.ReadLine();
+                Console.Write((i + 1) + ". ürün Adı Giriniz : ");
+                urunAdi[i] = Console.ReadLine();
+                Console.Write((i + 1) + ". ürün Fiyatı Giriniz : ");
+                urunFiyat[i] = Convert.ToInt32(Console.ReadLine());
+               
+            }
+
+
+            Console.WriteLine("En pahalı ürün : " + urunAdi[Array.IndexOf(urunFiyat,urunFiyat.Max())]);
+            Console.WriteLine("En ucuz ürün : " + urunAdi[Array.IndexOf(urunFiyat, urunFiyat.Min())]);
+            Console.WriteLine("Ortalama : " + urunFiyat.Average());
+
+            for (int i = 0; i < kayitSayisi; i++)
+            {
+                urunFiyat[i] *= 1.15; 
+            }
+
+            Console.WriteLine("Ürün No\tÜrün Adı\tÜrün Fiyatı");
+            Console.WriteLine("--------------------------------------------------");
+
+
+            for (int i = 0; i < kayitSayisi; i++)
+            {
+                Console.WriteLine(urunNo[i] + "\t" + urunAdi[i] + "\t" + urunFiyat[i]);
+            }
+
+
+
+
             Console.ReadKey();
 
         }
